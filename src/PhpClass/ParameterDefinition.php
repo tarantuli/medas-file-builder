@@ -22,7 +22,7 @@ class ParameterDefinition implements \Stringable
         }
     }
 
-    public function __toString()
+    public function __toString(): string
     {
         return $this->type . ' $' . $this->name;
     }

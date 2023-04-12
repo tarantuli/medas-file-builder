@@ -18,16 +18,16 @@ class MethodDefinition implements \Stringable
     {
     }
 
-    public function __toString()
+    public function __toString(): string
     {
         $string = $this->visibility . ' ';
         if ($this->isStatic) {
             $string .= 'static ';
         }
 
-        $string .= 'function '.$this->name . '(';
+        $string .= 'function ' . $this->name . '(';
         foreach ($this->parameters as $parameter) {
-            $string .= $parameter. ', ';
+            $string .= $parameter . ', ';
         }
 
         if ($this->parameters) {

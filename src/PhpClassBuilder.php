@@ -5,9 +5,8 @@ declare(strict_types=1);
 namespace Medas\FileBuilder;
 
 use Medas\FileBuilder\PhpClass\PhpClassDefinition;
-use Medas\PhpFormatter\Formatter;
-use Medas\PhpFormatter\Settings\Medas;
-use Medas\ServiceManager\Attributes\Service;
+use Medas\PhpFormatter\{Formatter, Settings\Medas};
+use Medas\ServiceManager\Service;
 
 #[Service]
 class PhpClassBuilder
@@ -15,7 +14,7 @@ class PhpClassBuilder
     private string $content;
 
     public function __construct(
-        private Formatter $formatter,
+        private readonly Formatter $formatter,
     )
     {
     }
