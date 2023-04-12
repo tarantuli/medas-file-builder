@@ -11,8 +11,8 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "morphp/medas-service-manager": "@dev",
-        "morphp/medas-php-formatter": "@dev"
+        "morphp/medas-service-manager": "dev-dev",
+        "morphp/medas-php-formatter": "dev-dev"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5"
