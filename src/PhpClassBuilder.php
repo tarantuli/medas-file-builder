@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Medas\FileBuilder;
 
+use Medas\Core\Attributes\Service;
 use Medas\FileBuilder\PhpClass\PhpClassDefinition;
 use Medas\PhpFormatter\{Formatter, Settings\Medas};
-use Medas\ServiceManager\Service;
 
 #[Service]
 class PhpClassBuilder
