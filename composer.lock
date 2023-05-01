@@ -12,18 +12,16 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:tarantuli/medas-console.git",
-                "reference": "f4e51cd5fb0606250b3d8aef0b40915b45031f50"
+                "reference": "b65617de1b239f39acbc0b967b6f0844d272cdff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tarantuli/medas-console/zipball/f4e51cd5fb0606250b3d8aef0b40915b45031f50",
-                "reference": "f4e51cd5fb0606250b3d8aef0b40915b45031f50",
+                "url": "https://api.github.com/repos/tarantuli/medas-console/zipball/b65617de1b239f39acbc0b967b6f0844d272cdff",
+                "reference": "b65617de1b239f39acbc0b967b6f0844d272cdff",
                 "shasum": ""
             },
-            "require": {
-                "morphp/medas-service-manager": "dev-dev"
-            },
             "require-dev": {
+                "morphp/medas-service-manager": "dev-dev",
                 "phpunit/phpunit": "^9.5"
             },
             "default-branch": true,
@@ -50,7 +48,7 @@
                 "source": "https://github.com/tarantuli/medas-console/tree/dev",
                 "issues": "https://github.com/tarantuli/medas-console/issues"
             },
-            "time": "2023-04-18T13:13:29+00:00"
+            "time": "2023-05-01T09:09:16+00:00"
         },
         {
             "name": "morphp/medas-core",
@@ -58,12 +56,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:tarantuli/medas-core.git",
-                "reference": "a6b167d90e352f3722745bfd606af4678610930e"
+                "reference": "683b78a09b25a7bdcfeef2cd3daccea43be77bfe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tarantuli/medas-core/zipball/a6b167d90e352f3722745bfd606af4678610930e",
-                "reference": "a6b167d90e352f3722745bfd606af4678610930e",
+                "url": "https://api.github.com/repos/tarantuli/medas-core/zipball/683b78a09b25a7bdcfeef2cd3daccea43be77bfe",
+                "reference": "683b78a09b25a7bdcfeef2cd3daccea43be77bfe",
                 "shasum": ""
             },
             "require": {
@@ -97,7 +95,7 @@
                 "source": "https://github.com/tarantuli/medas-core/tree/dev",
                 "issues": "https://github.com/tarantuli/medas-core/issues"
             },
-            "time": "2023-04-18T11:16:43+00:00"
+            "time": "2023-04-28T14:37:55+00:00"
         },
         {
             "name": "morphp/medas-file-system",
@@ -105,12 +103,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:tarantuli/medas-file-system.git",
-                "reference": "d0120d56f72575f22a36cebb4388b2328d1006e6"
+                "reference": "54e50eef0a78460eca0e57c998cd979e52388720"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tarantuli/medas-file-system/zipball/d0120d56f72575f22a36cebb4388b2328d1006e6",
-                "reference": "d0120d56f72575f22a36cebb4388b2328d1006e6",
+                "url": "https://api.github.com/repos/tarantuli/medas-file-system/zipball/54e50eef0a78460eca0e57c998cd979e52388720",
+                "reference": "54e50eef0a78460eca0e57c998cd979e52388720",
                 "shasum": ""
             },
             "require": {
@@ -137,7 +135,7 @@
                 "source": "https://github.com/tarantuli/medas-file-system/tree/dev",
                 "issues": "https://github.com/tarantuli/medas-file-system/issues"
             },
-            "time": "2023-04-18T13:51:19+00:00"
+            "time": "2023-05-01T09:37:58+00:00"
         },
         {
             "name": "morphp/medas-php-formatter",
@@ -145,12 +143,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:tarantuli/medas-php-formatter.git",
-                "reference": "d49b702e1682570ec348eeb5d0209a03da2600a5"
+                "reference": "45457aefae1ed0570deebb4a77d4e49d1a64dd1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tarantuli/medas-php-formatter/zipball/d49b702e1682570ec348eeb5d0209a03da2600a5",
-                "reference": "d49b702e1682570ec348eeb5d0209a03da2600a5",
+                "url": "https://api.github.com/repos/tarantuli/medas-php-formatter/zipball/45457aefae1ed0570deebb4a77d4e49d1a64dd1c",
+                "reference": "45457aefae1ed0570deebb4a77d4e49d1a64dd1c",
                 "shasum": ""
             },
             "require": {
@@ -181,7 +179,7 @@
                 "source": "https://github.com/tarantuli/medas-php-formatter/tree/dev",
                 "issues": "https://github.com/tarantuli/medas-php-formatter/issues"
             },
-            "time": "2023-04-12T14:53:01+00:00"
+            "time": "2023-04-18T14:41:18+00:00"
         },
         {
             "name": "morphp/medas-service-manager",
@@ -189,12 +187,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:tarantuli/medas-service-manager.git",
-                "reference": "d3880847344180f478d4e522244aa93feb2e299c"
+                "reference": "fc9b918468c575c63321f9afb2c63f77688f00e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tarantuli/medas-service-manager/zipball/d3880847344180f478d4e522244aa93feb2e299c",
-                "reference": "d3880847344180f478d4e522244aa93feb2e299c",
+                "url": "https://api.github.com/repos/tarantuli/medas-service-manager/zipball/fc9b918468c575c63321f9afb2c63f77688f00e6",
+                "reference": "fc9b918468c575c63321f9afb2c63f77688f00e6",
                 "shasum": ""
             },
             "require": {
@@ -228,7 +226,7 @@
                 "source": "https://github.com/tarantuli/medas-service-manager/tree/dev",
                 "issues": "https://github.com/tarantuli/medas-service-manager/issues"
             },
-            "time": "2023-04-18T10:54:13+00:00"
+            "time": "2023-05-01T09:13:19+00:00"
         }
     ],
     "packages-dev": [
