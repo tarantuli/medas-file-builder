@@ -15,6 +15,7 @@
         "morphp/medas-php-formatter": "dev-dev"
     },
     "require-dev": {
+        "morphp/medas-service-manager": "dev-dev",
         "phpunit/phpunit": "^9.5"
     },
     "autoload": {

@@ -14,9 +14,9 @@ class FileBuilderPackage extends BasePackage
 
     public function dependencies(): array
     {
-        return $this->dependenciesByClass([
-            PhpFormatterPackage::class,
-        ]);
+        return [
+            PhpFormatterPackage::instance(),
+        ];
     }
 
     public function sourceDirectory(): string
