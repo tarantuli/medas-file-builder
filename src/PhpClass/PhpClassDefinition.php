@@ -8,6 +8,7 @@ class PhpClassDefinition
 {
     public string|null $extends = null;
     public array $implements = [];
+
     /** @var MethodDefinition[] */
     public array $methods = [];
 

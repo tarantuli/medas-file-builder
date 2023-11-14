@@ -8,8 +8,10 @@ class MethodDefinition implements \Stringable
 {
     public string $visibility = 'public';
     public bool $isStatic = false;
+
     /** @var ParameterDefinition[] */
     public array $parameters;
+
     /** @var string[] */
     public array $returnTypes = [];
     public string|null $body = null;
@@ -21,11 +23,13 @@ class MethodDefinition implements \Stringable
     public function __toString(): string
     {
         $string = $this->visibility . ' ';
+
         if ($this->isStatic) {
             $string .= 'static ';
         }
 
         $string .= 'function ' . $this->name . '(';
+
         foreach ($this->parameters as $parameter) {
             $string .= $parameter . ', ';
         }

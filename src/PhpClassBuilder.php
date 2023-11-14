@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Medas\FileBuilder;
 
 use Medas\Core\Attributes\Service;
-use Medas\FileBuilder\PhpClass\PhpClassDefinition;
 use Medas\PhpFormatter\{Formatter, Settings\Medas};
 
 #[Service]
@@ -19,7 +18,7 @@ class PhpClassBuilder
     {
     }
 
-    public function build(PhpClassDefinition $classDefinition, bool $doFormat = true): string
+    public function build(PhpClass\PhpClassDefinition $classDefinition, bool $doFormat = true): string
     {
         $this->content = "<?php\n";
 
@@ -38,9 +37,11 @@ class PhpClassBuilder
         }
 
         $this->content .= '{';
+
         foreach ($classDefinition->methods as $method) {
             $this->content .= $method;
         }
+
         $this->content .= '}';
 
         if ($doFormat) {
