@@ -14,6 +14,7 @@ class MethodDefinition implements \Stringable
 
     /** @var string[] */
     public array $returnTypes = [];
+
     public string|null $body = null;
 
     public function __construct(public string $name)
