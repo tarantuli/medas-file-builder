@@ -1,6 +1,9 @@
 {
     "name": "morphp/medas-file-builder",
     "description": "Medas file builder",
+    "keywords": [
+        "storage"
+    ],
     "authors": [
         {
             "name": "Patrick Morpey",
