@@ -8,46 +8,39 @@ use Medas\Core\Attributes\Service;
 use Medas\PhpFormatter\{Formatter, Settings\Medas};
 
 #[Service]
-class PhpClassBuilder
+readonly class PhpClassBuilder
 {
-    private string $content;
-
     public function __construct(
-        private readonly Formatter $formatter,
+        private Formatter $formatter,
     )
     {
     }
 
     public function build(PhpClass\PhpClassDefinition $classDefinition, bool $doFormat = true): string
     {
-        $this->content = "<?php\n";
+        $content = "<?php\n";
 
         if ($classDefinition->namespace) {
-            $this->content .= "namespace $classDefinition->namespace;\n";
+            $content .= "namespace $classDefinition->namespace;\n";
         }
 
-        $this->content .= 'class ' . $classDefinition->name;
+        $content .= 'class ' . $classDefinition->name;
 
         if ($classDefinition->extends) {
-            $this->content .= ' extends \\' . $classDefinition->extends;
+            $content .= ' extends \\' . $classDefinition->extends;
         }
 
         if ($classDefinition->implements) {
-            $this->content .= ' implements \\' . implode(', \\', $classDefinition->implements);
+            $content .= ' implements \\' . implode(', \\', $classDefinition->implements);
         }
 
-        $this->content .= '{';
-
-        foreach ($classDefinition->methods as $method) {
-            $this->content .= $method;
-        }
-
-        $this->content .= '}';
+        $content .= '{' . implode('', $classDefinition->methods);
+        $content .= '}';
 
         if ($doFormat) {
-            $this->content = $this->formatter->format($this->content, new Medas());
+            $content = $this->formatter->format($content, new Medas());
         }
 
-        return $this->content;
+        return $content;
     }
 }
