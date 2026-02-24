@@ -18,13 +18,25 @@ readonly class PhpClassBuilder
 
     public function build(PhpClass\PhpClassDefinition $classDefinition, bool $doFormat = true): string
     {
-        $content = "<?php\n";
+        $content = "<?php\n\ndeclare(strict_types=1);\n\n";
 
         if ($classDefinition->namespace) {
-            $content .= "namespace $classDefinition->namespace;\n";
+            $content .= "namespace $classDefinition->namespace;\n\n";
         }
 
-        $content .= 'class ' . $classDefinition->name;
+        if ($classDefinition->isAbstract) {
+            $content .= 'abstract ';
+        }
+
+        if ($classDefinition->isFinal) {
+            $content .= 'final ';
+        }
+
+        if ($classDefinition->isReadonly) {
+            $content .= 'readonly ';
+        }
+
+        $content .= $classDefinition->type->value . ' ' . $classDefinition->name;
 
         if ($classDefinition->extends) {
             $content .= ' extends \\' . $classDefinition->extends;

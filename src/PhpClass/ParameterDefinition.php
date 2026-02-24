@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Medas\FileBuilder\PhpClass;
 
-class ParameterDefinition implements \Stringable
+readonly class ParameterDefinition implements \Stringable
 {
-    private const INTERNAL_TYPES = [
+    private const array INTERNAL_TYPES = [
         'bool',
         'int',
         'float',
@@ -26,14 +26,29 @@ class ParameterDefinition implements \Stringable
         'false',
     ];
 
+    private string $type;
+
     public function __construct(
-        public string $type,
-        public string $name,
+        string         $type,
+        private string $name,
     )
     {
-        if (!in_array($this->type, self::INTERNAL_TYPES)) {
-            $this->type = '\\' . $this->type;
+        $this->escapeNonInternalTypes($type);
+    }
+
+    private function escapeNonInternalTypes(string $type): void
+    {
+        $subTypes = explode('|', $type);
+
+        foreach ($subTypes as &$subType) {
+            $subType = trim($subType);
+
+            if (!in_array($subType, self::INTERNAL_TYPES)) {
+                $subType = '\\' . $subType;
+            }
         }
+
+        $this->type = implode('|', $subTypes);
     }
 
     public function __toString(): string

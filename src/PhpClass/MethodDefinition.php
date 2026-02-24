@@ -10,7 +10,7 @@ class MethodDefinition implements \Stringable
     public bool $isStatic = false;
 
     /** @var ParameterDefinition[] */
-    public array $parameters;
+    public array $parameters = [];
 
     /** @var string[] */
     public array $returnTypes = [];
@@ -24,6 +24,10 @@ class MethodDefinition implements \Stringable
     public function __toString(): string
     {
         $string = $this->visibility . ' ';
+
+        if (null === $this->body) {
+            $string .= 'abstract ';
+        }
 
         if ($this->isStatic) {
             $string .= 'static ';
@@ -45,7 +49,11 @@ class MethodDefinition implements \Stringable
             $string .= ': ' . implode('|', $this->returnTypes);
         }
 
-        if (null !== $this->body) {
+        if (null === $this->body) {
+            // Abstract method
+            $string .= ';';
+        }
+        else {
             $string .= '{' . $this->body . '}';
         }
 
