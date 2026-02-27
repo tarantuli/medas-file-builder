@@ -4,9 +4,8 @@ declare(strict_types=1);
 
 namespace Medas\FileBuilder;
 
-use Medas\Core\AsSingleton;
+use Medas\Core\{AsSingleton, BasePackage};
 use Medas\PhpFormatter\PhpFormatterPackage;
-use Medas\ServiceManager\BasePackage;
 
 class FileBuilderPackage extends BasePackage
 {
