@@ -5,18 +5,16 @@ declare(strict_types=1);
 namespace Medas\FileBuilder;
 
 use Medas\Core\Attributes\Service;
-use Medas\PhpFormatter\{Formatter, Settings\Medas};
 
 #[Service]
 readonly class PhpClassBuilder
 {
     public function __construct(
-        private Formatter $formatter,
     )
     {
     }
 
-    public function build(PhpClass\PhpClassDefinition $classDefinition, bool $doFormat = true): string
+    public function build(PhpClass\PhpClassDefinition $classDefinition): string
     {
         $content = "<?php\n\ndeclare(strict_types=1);\n\n";
 
@@ -48,10 +46,6 @@ readonly class PhpClassBuilder
 
         $content .= '{' . implode('', $classDefinition->methods);
         $content .= '}';
-
-        if ($doFormat) {
-            $content = $this->formatter->format($content, new Medas());
-        }
 
         return $content;
     }

@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Medas\FileBuilder;
 
 use Medas\Core\{AsSingleton, BasePackage};
-use Medas\PhpFormatter\PhpFormatterPackage;
 
 class FileBuilderPackage extends BasePackage
 {
@@ -14,7 +13,6 @@ class FileBuilderPackage extends BasePackage
     public function dependencies(): array
     {
         return [
-            PhpFormatterPackage::instance(),
         ];
     }
 
