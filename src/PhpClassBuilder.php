@@ -9,11 +9,6 @@ use Medas\Core\Attributes\Service;
 #[Service]
 readonly class PhpClassBuilder
 {
-    public function __construct(
-    )
-    {
-    }
-
     public function build(PhpClass\PhpClassDefinition $classDefinition): string
     {
         $content = "<?php\n\ndeclare(strict_types=1);\n\n";

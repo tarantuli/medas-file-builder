@@ -12,8 +12,7 @@ class FileBuilderPackage extends BasePackage
 
     public function dependencies(): array
     {
-        return [
-        ];
+        return [];
     }
 
     public function sourceDirectory(): string
